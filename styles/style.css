@@ -270,6 +270,7 @@ button {
 
 .content__video-card-description-container {
   width: 200px;
+  cursor: pointer;
 }
 
 .content__video-card-description-container:hover {
