@@ -255,6 +255,12 @@ button {
   background-color:#545050;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
 .content__card-link:focus {
   outline: none;
 }
@@ -271,12 +277,6 @@ button {
 .content__video-card-description-container {
   width: 200px;
   cursor: pointer;
-}
-
-.content__video-card-description-container:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
 }
 
 .content__video-card-title {
