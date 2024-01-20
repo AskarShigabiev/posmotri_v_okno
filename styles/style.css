@@ -59,7 +59,6 @@ ol {
 
 .result {
   width: 711px;
-  height: 456px;
 }
 
 .result__video-container {
@@ -67,7 +66,6 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
-  object-fit: cover;
 }
 
 .result__video {
@@ -78,8 +76,7 @@ ol {
 
 .search-form {
   display: flex;
-  align-items: flex-end;
-  gap: 40px;
+  justify-content: space-between;
   border: none;
 }
 
@@ -123,12 +120,13 @@ ol {
   font-size: 18px;
   font-style: normal;
   line-height: normal;
+  letter-spacing: -1px;
   appearance: none;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  background-color: #1b1919;
-  width: 240px;
+  background-color: transparent;
+  width: 225px;
   height: 27px;
 }
 
@@ -169,14 +167,18 @@ ol {
 
 button {
   color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background-color: #1B1919;
+  background-color: transparent;
   cursor: pointer;
+  border: 1px solid #FFF;
 }
 
 .button:active {
@@ -197,14 +199,9 @@ button {
 }
 
 .search-form__submit-button {
-  display: flex;
-  gap: 10px;
   width: 194px;
   height: 34px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #FFF;
-  cursor: pointer;
+  align-self: flex-end;
 }
 
 .content__details {
@@ -233,7 +230,6 @@ button {
 .content__list {
   position: relative;
   overflow-y: auto;
-  width: 399px;
 }
 
 .content__list-item:not(:last-child) {
@@ -244,15 +240,19 @@ button {
   display: block;
   text-decoration: none;
   color: #fff;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-style: normal;
-  text-transform: uppercase;
   margin: 2px;
+  cursor: pointer;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:active {
-  background-color: #545050;
+  background-color:#545050;
 }
 
 .content__card-link:focus {
@@ -269,7 +269,6 @@ button {
 }
 
 .content__video-card-description-container {
-  flex-grow: 1;
   width: 200px;
 }
 
@@ -280,6 +279,10 @@ button {
 }
 
 .content__video-card-title {
+  width: 200px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -297,12 +300,11 @@ button {
   height: 103px;
   flex-shrink: 0;
   object-fit: cover;
+  object-position: center;
 }
 
 .more-button {
-  width: 399px;
+  justify-self: center;
+  width: 398px;
   height: 34px;
-  border: 1px solid #fff;
-  background-color: #1b1919;
-  cursor: pointer;
 }
